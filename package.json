@@ -1,0 +1,29 @@
+{
+  "name": "detect-mobile-osk",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "ipad",
+    "iphone",
+    "on screen keyboard"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint */*.js && jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiscoNova/detect-mobile-osk.git"
+  },
+  "author": "Markku Post (Uttula)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiscoNova/detect-mobile-osk/issues"
+  },
+  "homepage": "https://github.com/DiscoNova/detect-mobile-osk#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}
