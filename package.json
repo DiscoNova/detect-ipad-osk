@@ -9,7 +9,7 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint */*.js && jest",
+    "test": "./node_modules/.bin/eslint */*.js && jest --verbose",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
