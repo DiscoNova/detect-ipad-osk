@@ -15,6 +15,8 @@ const isSupportedBrowser = (
         (typeof window.document) === 'object' &&
         window.document.getElementsByName &&
         (typeof window.document.getElementsByName) === 'function' &&
+        window.document.activeElement &&
+        (typeof window.document.activeElement) === 'object' &&
 
 
         true // If we got here, everything else is as supposed to be :)
@@ -25,7 +27,9 @@ const isSupportedBrowser = (
     !window.MSStream
 );
 
-if (isSupportedBrowser) {
+if (!isSupportedBrowser) {
+    delete module.exports; // eslint-disable-line prefer-reflect
+} else {
     window.oskDetectionEnabled = true;
     // TODO ... it actually might work :)
 }
