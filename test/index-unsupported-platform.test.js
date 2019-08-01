@@ -7,6 +7,6 @@ describe('on an unsupported platform', () => {
         expect(detectMobileOSK).not.toBeDefined();
     });
     test('doesn\'t even try to do anything', () => {
-        expect((window || {}).oskDetectionEnabled).not.toBeDefined();
+        expect(window.oskDetectionEnabled).not.toBeDefined();
     });
 });

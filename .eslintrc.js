@@ -212,7 +212,6 @@ module.exports = {
         'prefer-numeric-literals': 'error',
         'prefer-object-spread': 'error',
         'prefer-promise-reject-errors': 'error',
-        'prefer-reflect': 'error',
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',
@@ -232,9 +231,6 @@ module.exports = {
             'error',
             'last'
         ],
-        'sort-imports': 'error',
-        'sort-keys': 'error',
-        'sort-vars': 'error',
         'space-before-blocks': 'error',
         'space-before-function-paren': 'error',
         'space-in-parens': [
