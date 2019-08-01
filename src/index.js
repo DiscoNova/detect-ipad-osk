@@ -21,8 +21,8 @@ const isSupportedBrowser = (
         hasDocument &&
         hasGetElementsByName &&
         hasActiveElement &&
-
-        true // If we got here, everything else is as supposed to be :)
+        // Ok... everything is as supposed to be :)
+        true
     ) &&
     // Second, check that the client says it is one of the supported ones
     hasProperUserAgent &&
@@ -30,9 +30,22 @@ const isSupportedBrowser = (
     !isLiar
 );
 
-delete module.exports; // eslint-disable-line prefer-reflect
+delete module.exports;
 
 if (isSupportedBrowser && !window.oskDetectionEnabled) {
     window.oskDetectionEnabled = true;
-    // TODO ... at this point, it actually might be able to work :)
+
+    const [htmlTopLevelTag] = (window.document.getElementsByName('html') || []);
+
+    if (!htmlTopLevelTag) {
+        throw new Error('Unable to find HTML top level tag?');
+    }
+
+    const refresh = () => {
+        console.log('HTML top level tag?', htmlTopLevelTag); // eslint-disable-line no-console
+        // TODO: Under construction!
+        window.requestAnimationFrame(refresh);
+    };
+
+    refresh();
 }
