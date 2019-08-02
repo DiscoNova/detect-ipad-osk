@@ -6,6 +6,11 @@ module.exports = {
         'jest': true
     },
     'extends': 'eslint:recommended',
+    'overrides': [
+        {
+            'files': 'coverage/**/*'
+        }
+    ],
     'globals': {
         'Atomics': 'readonly',
         'SharedArrayBuffer': 'readonly'
@@ -75,7 +80,6 @@ module.exports = {
         ],
         'indent': 'error',
         'indent-legacy': 'error',
-        'init-declarations': 'error',
         'jsx-quotes': 'error',
         'key-spacing': 'error',
         'keyword-spacing': 'error',
@@ -91,7 +95,6 @@ module.exports = {
         'max-depth': 'error',
         'max-len': 'off',
         'max-lines': 'error',
-        'max-lines-per-function': 'error',
         'max-nested-callbacks': 'error',
         'max-params': 'error',
         'max-statements': 'off',
@@ -232,7 +235,6 @@ module.exports = {
             'last'
         ],
         'space-before-blocks': 'error',
-        'space-before-function-paren': 'error',
         'space-in-parens': [
             'error',
             'never'

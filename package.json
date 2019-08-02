@@ -12,6 +12,11 @@
     "test": "./node_modules/.bin/eslint */*.js && jest --verbose",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "jest": {
+    "setupFiles": [
+      "jest-useragent-mock"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DiscoNova/detect-mobile-osk.git"
@@ -25,6 +30,7 @@
   "devDependencies": {
     "coveralls": "^3.0.5",
     "eslint": "^6.0.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jest-useragent-mock": "0.0.3"
   }
 }
